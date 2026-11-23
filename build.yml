@@ -10,12 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Arrange files
-        run: |
-          mkdir -p app/src/main/java/com/tagreader
-          mv app-build.gradle.kts app/build.gradle.kts
-          mv AndroidManifest.xml app/src/main/AndroidManifest.xml
-          mv MainActivity.kt app/src/main/java/com/tagreader/MainActivity.kt
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
